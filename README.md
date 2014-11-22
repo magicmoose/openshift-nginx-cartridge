@@ -7,7 +7,7 @@ A cartridge for openshift that enables Nginx to be used as the web server.
 
 To install this cartridge use the cartridge reflector when creating an app
 
-	rhc create-app myapp http://cartreflect-claytondev.rhcloud.com/reflect?github=derdanu/openshift-nginx-cartridge
+	rhc create-app myapp http://cartreflect-claytondev.rhcloud.com/reflect?github=magicmoose/openshift-nginx-cartridge
 
 
 ### Configuration
@@ -23,4 +23,4 @@ in the config. Every time the server starts it first processes <code>nginx.conf.
 
 
 A <code>public/</code> folder is included where static content is served by default. However, as can be seen in the <code>nginx.conf.erb</code> file it
-is entirely configurable and only exists as a form of documentation.
+is entirely configurable and only exists as a form of documentation. The current example can be used to serve ember-cli generated frontent with gzip files

@@ -24,8 +24,9 @@ http {
 
     access_log  <%= ENV['OPENSHIFT_LOG_DIR'] %>access.log  main;
 
-    sendfile  on;
-    gzip      on;
+    sendfile     on;
+    gzip         on;
+    gzip_static  on;
 
     keepalive_timeout  65;
 
