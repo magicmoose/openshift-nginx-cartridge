@@ -3,6 +3,10 @@ server {
     root    <%= ENV['OPENSHIFT_REPO_DIR'] %>public;
 
     location / {
-        index  index.html index.htm;
+        rewrite ^ /index.html break;
+    }
+    
+    location /assets/ {
+        # do nothing and let nginx handle this as usual
     }
 }
